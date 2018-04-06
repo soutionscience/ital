@@ -1,0 +1,36 @@
+.top{
+    height: 30px;
+  
+}
+.is-small{
+    color: white;
+}
+.contacts p{
+    float: left;
+    margin: 8px;
+}
+.menu{ height: auto;}
+.menu .mymenu{height: 40px;}
+.menu .mymenu a{
+    color: white;
+}
+
+.menu .mymenu p{
+    float: left;
+    margin: 4px;
+
+}
+.menu .dropdown a{
+color: white;
+    
+}
+
+.menu .mymenu p:hover{
+    color: #ffff00;
+    font-size: 1.1em;
+}
+.navbar-dropdown a:hover{
+    background-color: gray;
+    color: #ffff00;
+
+}

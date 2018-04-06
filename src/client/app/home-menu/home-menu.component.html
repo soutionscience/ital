@@ -1,0 +1,46 @@
+<div class="top dark-primary-background-color">
+  <div class="contacts container">
+      <p class="is-small">  <i class="fas fa-phone-square"></i> 0720000000</p>
+    <p class="is-small"> <i class="fas fa-envelope-square"></i>	info@italsafaris.co.ke</p>
+  </div>
+
+</div>
+<div class="primary-background-color menu">
+<div class="mymenu is-hidden-mobile">
+  <a href=""><p>Home</p></a>
+  <p>|</p>
+  <a href=""><p>Packages</p></a>
+  <p>|</p>
+  <a href=""><p>Services</p></a>
+  <p>|</p>
+  <a href=""><p>About us</p></a>
+  <p>|</p>
+  <a href=""><p>Contact us</p></a>
+</div>
+<div class="burger is-hidden-desktop" >
+    <div class="navbar-burger" (click)="toggle()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+</div>
+<div class="dropdown is-hidden-desktop">
+    <div *ngIf="shown" class="navbar-dropdown">
+        <a class="navbar-item">
+        Home
+        </a>
+        <a class="navbar-item">
+            Packages
+        </a>
+        <a class="navbar-item">
+            Services
+        </a>
+        <a class="navbar-item">
+            About us
+        </a>
+        <a class="navbar-item">
+            Contact us
+        </a>
+      </div>
+</div>
+</div>

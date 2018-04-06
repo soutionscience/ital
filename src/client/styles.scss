@@ -1,0 +1,65 @@
+/* You can add global styles to this file, and also import other style files */
+$colors: (
+  primary:    #f44336,
+  primary-dark: #ba000d,
+  primary-light: #ff7961,
+  primary-pale: #D1C4E9,
+  accent: #FFC107,
+  secondary:  #ffff00,
+  secondary-dark:#c7cc00,
+  secondary-light:#ffff5a,
+  danger: #f53d3d,
+  light: #f4f4f4,
+  dark:   #222222
+);
+
+.primary-color{
+  color: #f44336
+}
+
+.primary-background-color{
+  background-color:   #f44336;
+  color: white;
+}
+.dark-primary-color{
+  color: #ba000d;
+}
+.dark-primary-background-color{
+  background-color: #ba000d;
+  color: white;
+}
+.light-primary-color{
+  color: #ff7961;
+}
+.light-primary-background-color{
+  background-color: #ff7961;
+  color: black;
+}
+
+.secondary-color{
+  color: #ffff00
+}
+
+.secondary-background-color{
+  background-color:   #ffff00;
+  color: black;
+}
+
+.dark-secondary-color{
+  color: #c7cc00;
+}
+.dark-secondary-background-color{
+  background-color: #c7cc00;
+  color: black;
+}
+
+.light-secondary-color{
+  color: #ffff5a;
+}
+.light-secondary-background-color{
+  background-color: #ffff5a;
+  color: black;
+}
+.light-background-color{
+  background-color: #e7e2e2;
+}
