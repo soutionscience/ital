@@ -1,0 +1,21 @@
+<div class="packages">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-one-third">
+  <div class="panel">
+    <p class="panel-heading">
+      Packages
+    </p>
+    <div class="panel-block " *ngFor ="let p of package" >
+      <a href="">{{p.title}}</a>
+    </div>
+   <footer class="card-footer">
+        <a class="card-footer-item" (click)="addNew()">Add New</a>
+        <a href="#" class="card-footer-item">Delete all</a>
+      </footer>
+  </div>  
+</div>
+<div class="column"></div>
+</div>
+  </div>
+</div>

@@ -1,4 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+p{
+  font-family: 'Montserrat', sans-serif;
+  text-align: justify;
+}
 $colors: (
   primary:    #f44336,
   primary-dark: #ba000d,
@@ -30,10 +35,11 @@ $colors: (
 }
 .light-primary-color{
   color: #ff7961;
+
 }
 .light-primary-background-color{
   background-color: #ff7961;
-  color: black;
+  color:white;
 }
 
 .secondary-color{

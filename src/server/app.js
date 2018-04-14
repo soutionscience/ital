@@ -4,11 +4,19 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+let mongoose = require('mongoose')
+require('dotenv').config();
+
 
 var index = require('./routes/index');
 var users = require('./routes/users');
+let package = require('./routes/package.routes')
+let uploads = require('./routes/uploads.routes');
+let cors = require('cors');
+
 
 var app = express();
+app.use(cors());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -24,6 +32,17 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
+app.use('/api/packages', package);
+app.use('/api/uploads', uploads);
+
+//connect to mongoose
+mongoose.connect(process.env.localdb, function(err, db){
+  if(err) throw err;
+  console.log("connected to local db");
+  database = db;
+
+})
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
