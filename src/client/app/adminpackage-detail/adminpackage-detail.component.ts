@@ -3,6 +3,7 @@ import { Generic } from '../shared/generic.model';
 import { MatDialog } from '@angular/material';
 import { PackageDialogComponent } from '../package-dialog/package-dialog.component';
 import { TypesDialogComponent } from '../types-dialog/types-dialog.component';
+import { AddImageComponent } from '../add-image/add-image.component';
 
 @Component({
   selector: 'app-adminpackage-detail',
@@ -21,6 +22,9 @@ export class AdminpackageDetailComponent implements OnInit {
     routes: 'packages',
     item: 'days'
   }})
+  }
+  addImage(){
+    this.dialog.open(AddImageComponent, {width: '400px', height:'auto'} )
   }
 
 }

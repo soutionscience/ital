@@ -10,6 +10,7 @@ import { PackagesComponent } from '../packages/packages.component';
 import { PackageDialogComponent } from '../package-dialog/package-dialog.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminpackageDetailComponent } from '../adminpackage-detail/adminpackage-detail.component';
+import { AddImageComponent } from '../add-image/add-image.component';
 
 const routes: Routes = [
   {path: '', component: AdminAreaComponent, children:[
@@ -25,6 +26,7 @@ const routes: Routes = [
   declarations: [AdminAreaComponent, SidebarComponent, DashboardComponent,
      AdminPackagesComponent,
      AdminpackageDetailComponent],
-  entryComponents:[ ]
+     exports:[RouterModule],
+     entryComponents:[ ]
 })
 export class AdminModule { }

@@ -13,11 +13,13 @@ import { UploadComponent } from './upload/upload.component';
 import { PackageDialogComponent } from './package-dialog/package-dialog.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TypesDialogComponent } from './types-dialog/types-dialog.component';
+import { AddImageComponent } from './add-image/add-image.component';
+import { UploadService } from './services/upload.service';
 
 
 
 @NgModule({
-  declarations: [PackageDialogComponent, TypesDialogComponent],
+  declarations: [PackageDialogComponent, TypesDialogComponent, AddImageComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -27,9 +29,9 @@ import { TypesDialogComponent } from './types-dialog/types-dialog.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  entryComponents:[PackageDialogComponent, TypesDialogComponent],
+  entryComponents:[PackageDialogComponent, TypesDialogComponent, AddImageComponent],
 
-  providers: [ApiService],
+  providers: [ApiService, UploadService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
