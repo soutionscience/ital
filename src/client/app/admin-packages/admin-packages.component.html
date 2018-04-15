@@ -1,13 +1,13 @@
 <div class="packages">
   <div class="container">
     <div class="columns">
-      <div class="column is-one-third">
+      <div class="column is-one-thirds">
   <div class="panel">
     <p class="panel-heading">
       Packages
     </p>
-    <div class="panel-block " *ngFor ="let p of package" >
-      <a href="">{{p.title}}</a>
+    <div class="panel-block " *ngFor ="let p of packages" >
+      <p (click)="details(p)">{{p.title}}</p>
     </div>
    <footer class="card-footer">
         <a class="card-footer-item" (click)="addNew()">Add New</a>
@@ -15,7 +15,11 @@
       </footer>
   </div>  
 </div>
-<div class="column"></div>
+
+<div class="column">
+    <app-adminpackage-detail [package]="package"></app-adminpackage-detail>
+</div>
+
 </div>
   </div>
 </div>

@@ -11,18 +11,23 @@ import { MatDialogModule, MatIconModule} from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UploadComponent } from './upload/upload.component';
 import { PackageDialogComponent } from './package-dialog/package-dialog.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TypesDialogComponent } from './types-dialog/types-dialog.component';
+
 
 
 @NgModule({
-  declarations: [PackageDialogComponent],
+  declarations: [PackageDialogComponent, TypesDialogComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RestangularModule.forRoot(restangularConfigFactory),
     MatDialogModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  entryComponents:[PackageDialogComponent],
+  entryComponents:[PackageDialogComponent, TypesDialogComponent],
 
   providers: [ApiService],
   bootstrap: [AppComponent]

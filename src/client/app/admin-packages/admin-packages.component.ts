@@ -11,7 +11,8 @@ import { UploadComponent } from '../upload/upload.component';
   styleUrls: ['./admin-packages.component.scss']
 })
 export class AdminPackagesComponent implements OnInit {
-  package: Generic[];
+  packages: Generic[];
+  package: Generic;
 
   constructor(private apiService: ApiService, private dialog: MatDialog) { }
 
@@ -20,7 +21,7 @@ export class AdminPackagesComponent implements OnInit {
   }
 
   getPackages(){
-   this.apiService.getResource('packages').subscribe(resp => this.package = resp)
+   this.apiService.getResource('packages').subscribe(resp => this.packages = resp)
   }
   // addNew(){
   //   console.log('adding new');
@@ -29,8 +30,10 @@ export class AdminPackagesComponent implements OnInit {
   // }
   addNew(product) {
     this.dialog.open(PackageDialogComponent, {width: '500px' , height: 'auto',  data: {
-      dataKey: product // shows which route to use when posting.
-    } })
+      dataKey: 'packages' // shows which route to use when posting.
+    } });
   }
+
+  details(p) {this.package = p;}
 
 }

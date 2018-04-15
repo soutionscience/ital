@@ -8,8 +8,10 @@ import { UploadComponent } from '../upload/upload.component';
 import { AdminPackagesComponent } from '../admin-packages/admin-packages.component';
 import { PackagesComponent } from '../packages/packages.component';
 import { PackageDialogComponent } from '../package-dialog/package-dialog.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AdminpackageDetailComponent } from '../adminpackage-detail/adminpackage-detail.component';
 
-const routes: Routes=[
+const routes: Routes = [
   {path: '', component: AdminAreaComponent, children:[
     {path: '', component: DashboardComponent},
     {path: 'packages', component: AdminPackagesComponent}
@@ -21,7 +23,8 @@ const routes: Routes=[
     RouterModule.forChild(routes)
   ],
   declarations: [AdminAreaComponent, SidebarComponent, DashboardComponent,
-     AdminPackagesComponent],
+     AdminPackagesComponent,
+     AdminpackageDetailComponent],
   entryComponents:[ ]
 })
 export class AdminModule { }

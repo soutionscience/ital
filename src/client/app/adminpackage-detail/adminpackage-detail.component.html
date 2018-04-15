@@ -1,0 +1,21 @@
+
+
+<section class="package" *ngIf= "package" >
+  <div class="card">
+    <div class="card-header">
+    <p class="card-header-title">{{package.title}}</p>
+    </div>
+    <div class="card-content" *ngIf="package.desc">
+      <p>{{package.desc}}</p>
+
+    </div>
+    <footer class="card-footer">
+        <a href="#" class="card-footer-item">Add Image</a>
+        <button href="#" class="card-footer-item"(click)="addDays(package._id)">Add Days</button>
+        <a href="#" class="card-footer-item">Delete</a>
+      </footer>
+    
+  </div>
+  
+
+</section>

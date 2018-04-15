@@ -14,5 +14,8 @@ getResource(apiRoute): Observable<any[]> {
 postResource(apiRoute, message): Observable<any[]>{
   return this.restangular.all(apiRoute).post(message);
 }
+postTypes(apiRoute, id:number, message, item){
+  return this.restangular.one(apiRoute, id).all(item).post(message);
+}
 
 }
