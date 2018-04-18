@@ -8,10 +8,16 @@ let Day = new Schema({
 
 });
 
+let Image = new Schema({
+    originalname: String,
+    filename: String
+})
+
 let Package = new Schema({
     title: String,
     desc: String,
-    days: [Day]
+    days: [Day],
+    images: [Image]
 });
 
 module.exports = mongoose.model('Package', Package);

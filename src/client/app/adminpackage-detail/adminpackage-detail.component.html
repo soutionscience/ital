@@ -1,5 +1,4 @@
 
-
 <section class="package" *ngIf= "package" >
   <div class="card">
     <div class="card-header">
@@ -10,10 +9,9 @@
 
     </div>
     <footer class="card-footer">
-       <!-- <app-add-image></app-add-image> -->
-        <button class="button" href="#" (click)="addImage()">Add Image</button>
-        <button href="#" class="button"(click)="addDays(package._id)">Add Days</button>
-        <a href="#" class="button is-danger">Delete</a>
+      <button class="button is-primary" href="#" (click)="addImage(package._id)">Add Image</button>
+        <button href="#" class="button is-primary"(click)="addDays(package._id)">Add Days</button>
+        <button href="#" class="button is-danger">Delete</button>
       </footer>
     
   </div>

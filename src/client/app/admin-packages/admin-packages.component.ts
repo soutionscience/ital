@@ -3,7 +3,7 @@ import { Generic } from '../shared/generic.model';
 import { ApiService } from '../services/api.service';
 import { MatDialog, MatIcon} from '@angular/material';
 import { PackageDialogComponent } from '../package-dialog/package-dialog.component';
-import { UploadComponent } from '../upload/upload.component';
+
 
 @Component({
   selector: 'app-admin-packages',

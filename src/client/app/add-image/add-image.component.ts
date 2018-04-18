@@ -1,6 +1,7 @@
-import { Component, OnInit, ViewChild, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, ViewChild, Output, EventEmitter, Inject} from '@angular/core';
 import { UploadService } from '../services/upload.service';
-import { MatDialogRef } from '@angular/material';
+import { MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
+import { ApiService } from '../services/api.service';
 
 @Component({
   selector: 'app-add-image',
@@ -9,7 +10,9 @@ import { MatDialogRef } from '@angular/material';
 })
 export class AddImageComponent implements OnInit {
 
-  constructor(private uploadService: UploadService, 
+  constructor(private uploadService: UploadService,
+    private apiService: ApiService, 
+    @Inject(MAT_DIALOG_DATA) public data:any,
     private matDialogRef: MatDialogRef<AddImageComponent>) { }
   @Output() myNotify = new EventEmitter<any>()
 
@@ -23,8 +26,9 @@ export class AddImageComponent implements OnInit {
         this.uploadService
             .upload(fileToUpload)
             .subscribe(res => {
-                this.myNotify.emit(res)
+               // this.myNotify.emit(res)
                 console.log('is this the res' , res);
+                this.apiService.postTypes('packages', this.data.myId, res, 'images' )
             });
     }
     this.close();

@@ -18,6 +18,15 @@ exports.get= function(req, res, next) {
     })
  
 }
+exports.delete = function(req, res , next){
+    console.log('hitting delete');
+    Package.deleteMany({})
+    .exec(function(err, resp){
+        if(err) throw err;
+        res.status(200).send("deleted all")
+    })
+
+}
 exports.postTypes = function(req, res, next){
     console.log('hitting post days');
     Package.findById(req.params.id, function(err, resp){
@@ -29,4 +38,21 @@ exports.postTypes = function(req, res, next){
         })
 
     })
+};
+
+exports.postImages = function(req, res, next){
+    console.log('post images')
+    Package.findById(req.params.id, function(err, resp){
+        if (err)throw err;
+     for(var i = (resp.images.length-1); i>=0; i--){
+         resp.images.id(resp.images[i]._id).remove();
+  
+     }
+    resp.images.push(req.body)
+    resp.save(function(err, result){
+        if(err) throw err;
+        res.status(201).send({status: "images added"});
+    })
+    })
+
 }

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { WelcomeComponent } from '../welcome/welcome.component';
 import { PackagesComponent } from '../packages/packages.component';
+import { SideMenuComponent } from '../side-menu/side-menu.component';
 
 const routes: Routes = [
   {path: '', component: WelcomeComponent,  }
@@ -13,6 +14,6 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forChild(routes),
   ],
-  declarations: [WelcomeComponent, PackagesComponent]
+  declarations: [WelcomeComponent, PackagesComponent, SideMenuComponent]
 })
 export class WelcomeModule { }

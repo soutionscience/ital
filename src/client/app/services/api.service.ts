@@ -18,4 +18,8 @@ postTypes(apiRoute, id:number, message, item){
   return this.restangular.one(apiRoute, id).all(item).post(message);
 }
 
+deleteAll(apiRoute){
+  this.restangular.all(apiRoute).delete();
+}
+
 }
