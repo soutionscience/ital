@@ -1,0 +1,30 @@
+.main{
+	position: relative;
+}
+
+
+
+.intro span  {
+display: block;
+padding: 25px;
+}
+.intro span p{
+	color: white;
+	// font-size: 0.95em;
+	text-align: center;
+}
+
+.intro{
+	position: absolute;
+	top: 20px;
+	left: 40px;
+	height: 350px;
+	width: 350px;
+	border-radius: 75%;
+	border: 4px white solid;
+    display: inline-block;
+    text-align: center;
+    margin:5px;
+    overflow:auto;
+    padding:5px;
+    }

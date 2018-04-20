@@ -7,6 +7,9 @@ module.exports = function(controller, router){
     router.route('/:id/days')
     .post(controller.postTypes)
 
+    router.route('/:id/services')
+    .post(controller.postTypes)
+
     router.route('/:id/images')
     .post(controller.postImages)
 

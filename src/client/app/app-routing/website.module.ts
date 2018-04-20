@@ -6,6 +6,7 @@ import { HomeMenuComponent } from '../home-menu/home-menu.component';
 import { BannerComponent } from '../banner/banner.component';
 import { BottomComponent } from '../bottom/bottom.component';
 import { FooterComponent } from '../footer/footer.component';
+import { IntroComponent } from '../intro/intro.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent, children: [
@@ -17,6 +18,6 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [HomeComponent, HomeMenuComponent, BannerComponent, BottomComponent, FooterComponent]
+  declarations: [HomeComponent, HomeMenuComponent, BannerComponent, BottomComponent, FooterComponent, IntroComponent]
 })
 export class WebsiteModule { }

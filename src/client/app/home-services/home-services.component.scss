@@ -1,0 +1,25 @@
+.service{
+	padding: 8px;
+}
+.title{
+	color: white;
+}
+.service-image{
+	
+	border: 4px white solid;
+	border-radius: 75%;
+	height: 250px;
+	width: 250px;
+	overflow: hidden;
+	text-align: center;
+	margin-bottom: 4px;
+}
+.taxi{background-image: url("/assets/images/taxi.png"); height: 250px;width: 250px;}
+.tour{background-image: url("/assets/images/tour3.jpg"); height: 250px;width: 250px;}
+.carhire{background-image: url("/assets/images/carhire.jpg"); height: 250px;width: 250px;}
+.cargo{background-image: url("/assets/images/cargo.jpg"); height: 250px;width: 250px;}
+
+p{
+	vertical-align: center;
+	text-align: center;
+}

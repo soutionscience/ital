@@ -5,7 +5,9 @@ import { AppComponent } from '../app.component';
 
 const routes: Routes = [
   {path: '', loadChildren: './website.module#WebsiteModule'},
-  {path: 'admin', loadChildren: './admin.module#AdminModule'}
+  {path: 'admin', loadChildren: './admin.module#AdminModule'},
+  {path: '', redirectTo: 'home', pathMatch: 'full'}
+  {path: 'admin', redirectTo: 'packages', pathMatch: 'full'}
 ];
 
 @NgModule({

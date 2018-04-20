@@ -1,6 +1,16 @@
 .welcome{
     padding: 8px;
+    background-image: url("/assets/images/elephants.jpeg");
+      /* Set a specific height */
+    height: 400px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .main{
     padding: 8px;
+
 }

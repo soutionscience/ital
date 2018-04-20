@@ -1,0 +1,21 @@
+<div class="services container">
+	<div class="panel" *ngFor= 'let s of services'>
+		<div class="panel-heading">
+			{{s.title}}
+		</div>
+		<div class="panel-block">
+			<div class="title"><p class="title is-4">Main image</p> <br/></div>
+			<div class="main-mage">
+				 <img  [src]="'/uploads/' + s.images[0]?.filename" height="auto" width="200px">
+			</div>
+			<div class="content"><button class="button is-primary" href="#" (click)="addImage(s._id, 'services')">Add Image</button>
+				</div>
+		</div>
+		<div class="panel-block" *ngFor="let item of s.services">
+			<p class="title is-5">{{item.title}}</p>
+		</div>
+		<div class="panel-block">
+			<button class="button" (click)="addService(s._id)">Add Service</button>
+		</div>
+	</div>
+</div>

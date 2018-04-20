@@ -10,11 +10,13 @@ import { PackageDialogComponent } from '../package-dialog/package-dialog.compone
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminpackageDetailComponent } from '../adminpackage-detail/adminpackage-detail.component';
 import { AddImageComponent } from '../add-image/add-image.component';
+import { AdminServicesComponent } from '../admin-services/admin-services.component';
 
 const routes: Routes = [
   {path: '', component: AdminAreaComponent, children:[
     {path: '', component: DashboardComponent},
-    {path: 'packages', component: AdminPackagesComponent}
+    {path: 'packages', component: AdminPackagesComponent},
+    {path: 'services', component: AdminServicesComponent}
   ]}
 ]
 @NgModule({
@@ -23,7 +25,7 @@ const routes: Routes = [
     RouterModule.forChild(routes)
   ],
   declarations: [AdminAreaComponent, SidebarComponent, DashboardComponent,
-     AdminPackagesComponent, AdminpackageDetailComponent],
+     AdminPackagesComponent, AdminpackageDetailComponent, AdminServicesComponent],
 
      exports:[RouterModule],
      entryComponents:[ ]

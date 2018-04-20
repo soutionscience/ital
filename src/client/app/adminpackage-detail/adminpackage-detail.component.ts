@@ -23,8 +23,8 @@ export class AdminpackageDetailComponent implements OnInit {
     item: 'days'
   }})
   }
-  addImage(id) {
-    this.dialog.open(AddImageComponent, {width: '400px', height: 'auto', data: { myId: id}} );
+  addImage(id, route) {
+    this.dialog.open(AddImageComponent, {width: '400px', height: 'auto', data: { myId: id, myRoute: route }} );
   }
 
 }

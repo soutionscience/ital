@@ -1,28 +1,32 @@
+<style>
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+</style>
+
 <div class="packages">
 <div class="container">
 <div class="columns">
   <div class="column is-one-third" *ngFor="let p of packages">
     <div class="card">
         <div class="card-image">
-            <figure class="image is-2by1">
+            <figure class="">
                 <img [src]="'/uploads/' + p.images[0]?.filename">
             </figure>
           </div>
-          <div class="">
-              <p class="title is-4">{{p.title}}</p>
-              <p class="subtitle is-6">@johnsmith</p>
+      <div class="text">
+        <div class="columns">
+          <div class="column palm is-one-fifth">
+            <img src="/assets/images/palm5.png">
+          </div>
+          <div class="column">
+            <div class="mytitle"> {{p.title | uppercase}}</div>
+            <div>
+              <button class="button"> Read More</button>
             </div>
-            <div class="content">
-              <p>{{p.desc}}...</p>
-                <br>
-                
-              </div>
-              <footer class="card-footer">
-                 <div class="card-footer-item">
-                  <img href="#" class="" src="assets/images/palm-icon.png" width="auto"></div>
-                  <a href="#" class="card-footer-item">Read More</a>
-                  <a href="#" class="card-footer-item">Book now</a>
-                </footer>
+           
+          </div>
+        </div>
+      </div>
+         
 
     </div>
   </div>

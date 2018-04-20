@@ -12,6 +12,7 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 let package = require('./routes/package.routes')
 let uploads = require('./routes/uploads.routes');
+let services = require('./routes/services.routes')
 let cors = require('cors');
 
 
@@ -35,6 +36,7 @@ app.use('/', index);
 app.use('/users', users);
 app.use('/api/packages', package);
 app.use('/api/uploads', uploads);
+app.use('/api/services', services)
 
 //connect to mongoose
 mongoose.connect(process.env.localdb, function(err, db){

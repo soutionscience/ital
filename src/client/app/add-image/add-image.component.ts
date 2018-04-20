@@ -28,7 +28,7 @@ export class AddImageComponent implements OnInit {
             .subscribe(res => {
                // this.myNotify.emit(res)
                 console.log('is this the res' , res);
-                this.apiService.postTypes('packages', this.data.myId, res, 'images' )
+                this.apiService.postTypes(this.data.myRoute, this.data.myId, res, 'images' )
             });
     }
     this.close();
