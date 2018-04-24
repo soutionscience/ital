@@ -32,6 +32,7 @@ export class AdminPackagesComponent implements OnInit {
     this.dialog.open(PackageDialogComponent, {width: '500px' , height: 'auto',  data: {
       dataKey: 'packages' // shows which route to use when posting.
     } });
+ 
   }
 
   details(p) {this.package = p;}

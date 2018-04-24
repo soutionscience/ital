@@ -22,7 +22,7 @@ postTypes(apiRoute, id:number, message, item){
 }
 
 deleteAll(apiRoute){
-  this.restangular.all(apiRoute).delete();
+  this.restangular.all(apiRoute).remove();
 }
 
 }
