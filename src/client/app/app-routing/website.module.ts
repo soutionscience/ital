@@ -7,10 +7,16 @@ import { BannerComponent } from '../banner/banner.component';
 import { BottomComponent } from '../bottom/bottom.component';
 import { FooterComponent } from '../footer/footer.component';
 import { IntroComponent } from '../intro/intro.component';
+import { PackageModule } from './package.module';
+import { PackagesComponent } from '../packages/packages.component';
 
 const routes: Routes = [
-  {path: '', component: HomeComponent, children: [
-    { path: 'home', loadChildren: './welcome.module#WelcomeModule'}] }
+  {path: '',  component: HomeComponent, children: [
+    { path: '', loadChildren: './welcome.module#WelcomeModule'},
+    {path: 'services', loadChildren: './service.module#ServiceModule'},
+  {path: 'about-us', loadChildren: './about.module#AboutModule'},
+  {path: 'contact-us', loadChildren: './contact.module#ContactModule'},
+{path: 'packages', loadChildren:'./package.module#PackageModule'}] }
 ];
 
 @NgModule({
@@ -18,6 +24,7 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [HomeComponent, HomeMenuComponent, BannerComponent, BottomComponent, FooterComponent, IntroComponent]
+  declarations: [HomeComponent, HomeMenuComponent,
+    BannerComponent, BottomComponent, FooterComponent, IntroComponent]
 })
 export class WebsiteModule { }

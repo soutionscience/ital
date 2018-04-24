@@ -1,0 +1,23 @@
+<div class="services" >
+  <div class="container">
+  <div class="columns">
+    <div class="column is-four-fifth">
+      <div *ngFor = "let s of services">
+       <div class="card">
+        <figure class="image">
+            <img [src]="'/uploads/' + s.images[0]?.filename" width="600px">
+        </figure>
+      </div> 
+        <p class="title is-3">{{s.title}}</p>
+        <p>{{s.desc}}</p>
+         <div *ngFor="let service of s.services">
+           <p class="title is-4">{{service.title}}</p>
+           <p>{{service.desc}}</p>
+
+         </div>
+      </div>
+
+    </div>
+  </div>
+  </div>
+</div>

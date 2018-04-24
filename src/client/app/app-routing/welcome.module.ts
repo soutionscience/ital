@@ -17,6 +17,6 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forChild(routes),
   ],
-  declarations: [WelcomeComponent, PackagesComponent, SideMenuComponent, HomeServicesComponent]
+  declarations: [WelcomeComponent, SideMenuComponent, HomeServicesComponent, PackagesComponent]
 })
 export class WelcomeModule { }

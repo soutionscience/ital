@@ -7,15 +7,15 @@
 </div>
 <div class="primary-background-color menu">
 <div class="mymenu is-hidden-mobile">
-  <a href=""><p>Home</p></a>
+  <a routerLink ="/"><p>Home</p></a>
   <p>|</p>
-  <a href=""><p>Packages</p></a>
+  <a routerLink="/packages" ><p>Packages</p></a>
   <p>|</p>
-  <a href=""><p>Services</p></a>
+  <a routerLink ="/services"><p>Services</p></a>
   <p>|</p>
-  <a href=""><p>About us</p></a>
+  <a routerLink="/about-us"><p>About us</p></a>
   <p>|</p>
-  <a href=""><p>Contact us</p></a>
+  <a routerLink ="/contact-us"><p>Contact us</p></a>
 </div>
 <div class="burger is-hidden-desktop" >
     <div class="navbar-burger" (click)="toggle()">
@@ -26,19 +26,19 @@
 </div>
 <div class="dropdown is-hidden-desktop">
     <div *ngIf="shown" class="navbar-dropdown">
-        <a class="navbar-item">
+        <a class="navbar-item" routerLink ="/">
         Home
         </a>
-        <a class="navbar-item">
+        <a routerLink="/packages" class="navbar-item" >
             Packages
         </a>
-        <a class="navbar-item">
+        <a class="navbar-item" routerLink ="/services">
             Services
         </a>
-        <a class="navbar-item">
+        <a class="navbar-item" routerLink="/about-us">
             About us
         </a>
-        <a class="navbar-item">
+        <a class="navbar-item" routerLink ="/contact-us">
             Contact us
         </a>
       </div>

@@ -1,3 +1,62 @@
 .bottom{
-    min-height: 30px;
+    // min-height: 30px;
+    // border-bottom: grey solid 1px;
+    padding: 4px;
+  
+   
 }
+
+.mycontainer {
+    width: 80%; margin: 0 auto;
+     display: flex;
+    width: 40%;
+   
+    
+}
+.mycontainer div{
+  flex-direction: row; 
+
+}
+.twitter, .facebook, .rss , .pinterest{
+    height: 68px;
+    width: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    flex-direction: column; 
+
+}
+.twitter{
+    background-image: url('/assets/images/social/twitter.png');
+
+}
+
+.facebook{
+    background-image: url('/assets/images/social/facebook-circle.png');
+}
+.pinterest{
+    background-image: url('/assets/images/social/pinterest-circle.png');
+}
+.rss{
+    background-image: url('/assets/images/social/rss-circle.png');
+}
+@media only screen and (max-width: 640px){
+    .mycontainer div{
+        // flex-direction: column; 
+      
+      }
+      .twitter{
+        background-image: url('/assets/images/social/twitter-medium.png');
+    
+    }
+    
+    .facebook{
+        background-image: url('/assets/images/social/facebook-circle-medium.png');
+    }
+    .pinterest{
+        background-image: url('/assets/images/social/pinterest-circle-medium.png');
+    }
+    .rss{
+        background-image: url('/assets/images/social/rss-circle-medium.png');
+    }
+
+} 
