@@ -9,6 +9,11 @@ exports.post= function (req, res, next) {
   
 }
 
+
+exports.getOne = function(req, res, next){
+
+}
+
 exports.get= function(req, res, next) {
     console.log('hitting get')
     Service.find({})

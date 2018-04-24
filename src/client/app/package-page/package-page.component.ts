@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../services/api.service';
+import { Generic } from '../shared/generic.model';
 
 @Component({
   selector: 'app-package-page',
@@ -6,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./package-page.component.scss']
 })
 export class PackagePageComponent implements OnInit {
-
-  constructor() { }
+  packages: Generic[];
+  constructor(private apiService: ApiService) { }
 
   ngOnInit() {
+    this.getPackages();
+  }
+
+  getPackages(){
+    this.apiService.getResource('packages')
+    .subscribe(resp=> this.packages = resp)
   }
 
 }

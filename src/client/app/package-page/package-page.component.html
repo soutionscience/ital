@@ -1,3 +1,35 @@
-<p>
-  package-page works!
-</p>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Raleway');
+    </style>
+    
+    <div class="packages">
+    <div class="container">
+    <div class="columns">
+      <div class="column is-one-third" *ngFor="let p of packages">
+        <div class="card">
+            <div class="card-image">
+                <figure class="">
+                    <img [src]="'/uploads/' + p.images[0]?.filename">
+                </figure>
+              </div>
+          <div class="text">
+            <div class="columns">
+              <div class="column palm is-one-fifth">
+                <img src="/assets/images/palm5.png">
+              </div>
+              <div class="column">
+                <div class="mytitle"> {{p.title | uppercase}}</div>
+                <div>
+                  <button class="button" [routerLink]="['/packagedetail', p._id]" > Read More</button>
+                </div>
+               
+              </div>
+            </div>
+          </div>
+             
+    
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>

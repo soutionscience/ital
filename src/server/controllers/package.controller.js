@@ -18,6 +18,14 @@ exports.get= function(req, res, next) {
     })
  
 }
+
+exports.getOne = function(req, res, next){
+    console.log('hitting get one')
+    Package.findById(req.params.id, function(err, resp){
+        if(err) throw err;
+        res.json(resp)
+    })
+}
 exports.delete = function(req, res , next){
     console.log('hitting delete');
     Package.deleteMany({})

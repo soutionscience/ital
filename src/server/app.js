@@ -39,7 +39,7 @@ app.use('/api/uploads', uploads);
 app.use('/api/services', services)
 
 //connect to mongoose
-mongoose.connect(process.env.localdb, function(err, db){
+mongoose.connect(process.env.remote_db, function(err, db){
   if(err) throw err;
   console.log("connected to local db");
   database = db;

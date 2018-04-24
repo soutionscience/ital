@@ -20,7 +20,7 @@
           <div class="column">
             <div class="mytitle"> {{p.title | uppercase}}</div>
             <div>
-              <button class="button"> Read More</button>
+              <button class="button" [routerLink]="['/packagedetail', p._id]" > Read More</button>
             </div>
            
           </div>

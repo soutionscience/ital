@@ -9,6 +9,8 @@ import { ApiService } from '../services/api.service';
 })
 export class PackagesComponent implements OnInit {
  packages: Generic[];
+ package: Generic;
+
   constructor(private apiService: ApiService) { }
 
   ngOnInit() {
@@ -17,5 +19,10 @@ export class PackagesComponent implements OnInit {
   getPackages(){
     this.apiService.getResource('packages').subscribe(resp=> this.packages = resp)
   }
+
+  clickedRoutes(p){
+  console.log('this is ', p);
+  }
+  
 
 }
