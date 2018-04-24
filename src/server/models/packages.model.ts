@@ -10,6 +10,7 @@ let Day = new Schema({
 
 let Package = new Schema({
     title: String,
+    shortdesc: String,
     desc: String,
     days: [Day]
 });

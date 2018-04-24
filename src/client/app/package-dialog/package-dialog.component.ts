@@ -20,6 +20,7 @@ export class PackageDialogComponent implements OnInit {
   createForm(){
    this.myForm = this.fb.group({
      title: '',
+     shortdesc: '',
      desc: ''
    });
   }

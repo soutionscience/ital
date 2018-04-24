@@ -28,7 +28,7 @@ export class AdminPackagesComponent implements OnInit {
   //   this.dialog.open(UploadComponent, { width: '700px', height: 'auto'} );
 
   // }
-  addNew(product) {
+  addNew() {
     this.dialog.open(PackageDialogComponent, {width: '500px' , height: 'auto',  data: {
       dataKey: 'packages' // shows which route to use when posting.
     } });
