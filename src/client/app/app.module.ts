@@ -17,6 +17,7 @@ import { UploadService } from './services/upload.service';
 
 
 
+
 @NgModule({
   declarations: [PackageDialogComponent, TypesDialogComponent, AddImageComponent],
   imports: [

@@ -5,6 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 let mongoose = require('mongoose')
+
 require('dotenv').config();
 
 
@@ -37,9 +38,11 @@ app.use('/users', users);
 app.use('/api/packages', package);
 app.use('/api/uploads', uploads);
 app.use('/api/services', services)
+app.get('*', function(req, res){ return res.sendFile(path.join(__dirname, 'public/index.html'))})
+
 
 //connect to mongoose
-mongoose.connect(process.env.remote_db, function(err, db){
+mongoose.connect(process.env.remote_db  , function(err, db){
   if(err) throw err;
   console.log("connected to local db");
   database = db;

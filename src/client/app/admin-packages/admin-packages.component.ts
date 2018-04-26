@@ -35,6 +35,10 @@ export class AdminPackagesComponent implements OnInit {
  
   }
 
-  details(p) {this.package = p;}
+  details(p) {this.package = p;};
+
+  deleteAll(){
+    this.apiService.deleteAll('packages');
+  }
 
 }
