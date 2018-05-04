@@ -9,6 +9,7 @@ import { Generic } from '../shared/generic.model';
 })
 export class PackagePageComponent implements OnInit {
   packages: Generic[];
+  selected: Generic;
   constructor(private apiService: ApiService) { }
 
   ngOnInit() {
@@ -19,5 +20,9 @@ export class PackagePageComponent implements OnInit {
     this.apiService.getResource('packages')
     .subscribe(resp=> this.packages = resp)
   }
+setSelected(p){
+  console.log("clicking selected")
+  this.selected = p;
 
+}
 }

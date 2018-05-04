@@ -4,42 +4,37 @@
     
     <div class="packages">
     <div class="container">
-      <div class="mypackages">
-        <p class="title is-3">
-          packages
-        </p>
-
-        <p>Ital safaris has a wide variety of safari packages for your needs.
-           Contact us to plan a safari that suits you.<br/>
-          Examples of safari packages: 
-          </p>
-      </div>
-    <div class="columns">
-      <div class="column is-one-third" *ngFor="let p of packages">
+<div class="colums">
+  <div class="column is-three-quarters thepackages">
+<p class="title"> <p>Ital safaris has a wide variety of safari packages for your needs.
+        Contact us to plan a safari that suits you.<br/>
+       Examples of safari packages: </p>
+       <div class="columns">
+          <div class="column is-half">
+              <div class="panel">
+                  <p class="panel-heading title">Packages</p>
+                  <div class="panel-block" *ngFor="let p of packages">
+                <div class="box" (click)="setSelected(p)"><p>{{p.title}}</p></div> </div>
+                  </div>
+          </div>
+          <div class="column" *ngIf="selected">
         <div class="card">
             <div class="card-image">
                 <figure class="">
-                    <img [src]="'/uploads/' + p.images[0]?.filename">
+                    <img [src]="'/uploads/' + selected.images[0]?.filename">
                 </figure>
               </div>
-          <div class="text">
-            <div class="columns">
-              <div class="column palm is-one-fifth">
-                <img src="/assets/images/palm5.png">
+              <div class="card-content">
+                <p class="title is-4">{{selected.title}}</p>
               </div>
-              <div class="column">
-                <div class="mytitle"> {{p.title | uppercase}}</div>
-                <div>
-                  <button class="button" [routerLink]="['/packagedetail', p._id]" > Read More</button>
-                </div>
-               
+              <div class="card-footer">
+                <button class="button" [routerLink]="['/packagedetail', selected._id]">Read More</button>
               </div>
-            </div>
-          </div>
-             
-    
         </div>
-      </div>
-    </div>
+          </div>
+        </div>
+
+  </div>
+</div>
     </div>
     </div>

@@ -13,8 +13,9 @@
 	overflow: hidden;
 	text-align: center;
 	margin-bottom: 4px;
+	
 }
-.taxi{background-image: url("/assets/images/taxi.png"); height: 250px;width: 250px;}
+.taxi{background-image: url("/assets/images/taxi.png"); height: 250px;width: 250px; }
 .tour{background-image: url("/assets/images/tour3.jpg"); height: 250px;width: 250px;}
 .carhire{background-image: url("/assets/images/carhire.jpg"); height: 250px;width: 250px;}
 .cargo{background-image: url("/assets/images/cargo.jpg"); height: 250px;width: 250px;}
@@ -22,4 +23,24 @@
 p{
 	vertical-align: center;
 	text-align: center;
+}
+.join{
+	width: 50px;
+	text-align: center;
+	margin: 0 auto;
+	position: relative;
+	top: 45%;
+	left: -10%;
+	opacity: 0;
+}
+.mybutton{
+
+	text-align: center;
+	position: relative;
+	left: 10%;
+	margin: 8px;
+
+}
+.join:hover{
+	opacity: 1;
 }
