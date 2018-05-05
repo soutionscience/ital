@@ -13,6 +13,7 @@
           <div class="column is-half">
               <div class="panel">
                   <p class="panel-heading title">Packages</p>
+                  <div *ngIf="!packages" class="loader"></div>
                   <div class="panel-block" *ngFor="let p of packages">
                 <div class="box" (click)="setSelected(p)"><p>{{p.title}}</p></div> </div>
                   </div>

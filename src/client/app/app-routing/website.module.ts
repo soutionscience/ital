@@ -11,6 +11,7 @@ import { PackageModule } from './package.module';
 import { PackagesComponent } from '../packages/packages.component';
 import {PackageDetailComponent} from '../package-detail/package-detail.component';
 import { SideComponent } from '../side/side.component';
+import { SidesComponent } from '../sides/sides.component';
 
 const routes: Routes = [
   {path: '',  component: HomeComponent, children: [

@@ -4,6 +4,7 @@
 
 <div class="packages">
 <div class="container">
+    <div *ngIf="!packages" class="loader"></div>
 <div class="columns">
   <div class="column is-one-third" *ngFor="let p of packages">
     <div class="card">

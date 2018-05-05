@@ -1,85 +1,85 @@
-.circles{ position: relative; margin: 4px;}
-// .circles div{ margin: 4px;  float: left;}
-.circle{
+// .circles{ position: relative; margin: 4px;}
+// // .circles div{ margin: 4px;  float: left;}
+// .circle{
   
-    background-image: url("/assets/images/contact.png");
-    height: 125px;
-    width: 125px;
-    border-radius: 75%;
-    position:absolute;
-    // bottom: 8px;
-    left: 0px;
+//     background-image: url("/assets/images/contact.png");
+//     height: 125px;
+//     width: 125px;
+//     border-radius: 75%;
+//     position:absolute;
+//     // bottom: 8px;
+//     left: 0px;
 
     
     
 
-}
-.circle2{
+// }
+// .circle2{
   
-    background-image: url("/assets/images/mboys.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 125px;
-    width: 125px;
-    border-radius: 75%;
-    position:absolute;
-    // bottom:8px;
-    left: 195px;
+//     background-image: url("/assets/images/mboys.jpeg");
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     height: 125px;
+//     width: 125px;
+//     border-radius: 75%;
+//     position:absolute;
+//     // bottom:8px;
+//     left: 195px;
 
-}
-.circle3{
+// }
+// .circle3{
   
-    background-image: url("/assets/images/boat.jpeg");
-    height: 125px;
-    width: 125px;
-    border-radius: 75%;
-    position:absolute;
-    // bottom: 8px;
-    left: 350px;
+//     background-image: url("/assets/images/boat.jpeg");
+//     height: 125px;
+//     width: 125px;
+//     border-radius: 75%;
+//     position:absolute;
+//     // bottom: 8px;
+//     left: 350px;
 
-}
-.body, .services{
-    height: 400px;
-    padding-top: 8px;
-}
-.box{
-    margin-top: 8px;
-    height: 350px;;
-}
+// }
+// .body, .services{
+//     height: 400px;
+//     padding-top: 8px;
+// }
+// .box{
+//     margin-top: 8px;
+//     height: 350px;;
+// }
 
-.icons div{float: left;}
-.icon{
-    background-image: url('/assets/images/palm.png');
+// .icons div{float: left;}
+// .icon{
+//     background-image: url('/assets/images/palm.png');
   
-}
-.icon2{
-    background-image: url('/assets/images/card.png');
+// }
+// .icon2{
+//     background-image: url('/assets/images/card.png');
   
-}
-.icon3{
-    background-image: url('/assets/images/contact.png');
+// }
+// .icon3{
+//     background-image: url('/assets/images/contact.png');
   
-}
-.icon,.icon2,.icon3{
-   margin: 4px;
-    height: 128px;
-    width: 128px;
-    background-repeat: no-repeat;
-}
+// }
+// .icon,.icon2,.icon3{
+//    margin: 4px;
+//     height: 128px;
+//     width: 128px;
+//     background-repeat: no-repeat;
+// }
 
 
-@media only screen and (max-width: 800px) {
-   .circle, .circle2, .circle3 {
-     position: static;
-     float: left;
-   }
-   .circle{
-       height: 100px; width: 100px;
-   }
-   .circle2{
-       height: 75px; width: 75px;
-   }
-   .circle3{
-       height: 50px; width: 50px;
-   }
-}
+// @media only screen and (max-width: 800px) {
+//    .circle, .circle2, .circle3 {
+//      position: static;
+//      float: left;
+//    }
+//    .circle{
+//        height: 100px; width: 100px;
+//    }
+//    .circle2{
+//        height: 75px; width: 75px;
+//    }
+//    .circle3{
+//        height: 50px; width: 50px;
+//    }
+// }

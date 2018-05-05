@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { PackagesComponent } from '../packages/packages.component';
 import { PackagePageComponent } from '../package-page/package-page.component';
+import { SidesComponent } from '../sides/sides.component';
 
 
 const routes: Routes = [{
@@ -14,6 +15,6 @@ const routes: Routes = [{
     CommonModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [PackagePageComponent]
+  declarations: [PackagePageComponent, SidesComponent]
 })
 export class PackageModule { }
