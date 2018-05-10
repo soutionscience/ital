@@ -12,4 +12,11 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
+  onDeactivate() {
+    console.log('is deactivate called?')
+     document.body.scrollTop = 0;
+    // Alternatively, you can scroll to top by using this other call:
+     window.scrollTo(0, 0)
+  }
+
 }

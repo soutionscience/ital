@@ -12,6 +12,7 @@ export class PackagePageComponent implements OnInit {
   selected: Generic;
   constructor(private apiService: ApiService) { }
 
+
   ngOnInit() {
     this.getPackages();
   }
