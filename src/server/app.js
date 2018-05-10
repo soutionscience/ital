@@ -13,7 +13,8 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 let package = require('./routes/package.routes')
 let uploads = require('./routes/uploads.routes');
-let services = require('./routes/services.routes')
+let services = require('./routes/services.routes');
+let message = require('./routes/message.route')
 let cors = require('cors');
 
 
@@ -37,7 +38,8 @@ app.use('/', index);
 app.use('/users', users);
 app.use('/api/packages', package);
 app.use('/api/uploads', uploads);
-app.use('/api/services', services)
+app.use('/api/services', services);
+app.use('/api/messages', message)
 app.get('*', function(req, res){ return res.sendFile(path.join(__dirname, 'public/index.html'))})
 
 
