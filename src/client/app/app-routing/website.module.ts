@@ -12,6 +12,7 @@ import { PackagesComponent } from '../packages/packages.component';
 import {PackageDetailComponent} from '../package-detail/package-detail.component';
 import { SideComponent } from '../side/side.component';
 import { SidesComponent } from '../sides/sides.component';
+import { LogoComponent } from '../logo/logo.component';
 
 const routes: Routes = [
   {path: '',  component: HomeComponent, children: [
@@ -29,6 +30,6 @@ const routes: Routes = [
     RouterModule.forChild(routes)
   ],
   declarations: [HomeComponent, HomeMenuComponent,
-    BannerComponent, BottomComponent, FooterComponent, IntroComponent, PackageDetailComponent, SideComponent]
+    BannerComponent, BottomComponent, FooterComponent, IntroComponent, PackageDetailComponent, SideComponent, LogoComponent]
 })
 export class WebsiteModule { }

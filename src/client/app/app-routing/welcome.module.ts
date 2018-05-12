@@ -6,6 +6,7 @@ import { PackagesComponent } from '../packages/packages.component';
 import { SideMenuComponent } from '../side-menu/side-menu.component';
 import { HomeServicesComponent } from '../home-services/home-services.component';
 import { IntroComponent } from '../intro/intro.component';
+import { LogoComponent } from '../logo/logo.component';
 
 
 const routes: Routes = [
