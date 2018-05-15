@@ -11,6 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminpackageDetailComponent } from '../adminpackage-detail/adminpackage-detail.component';
 import { AddImageComponent } from '../add-image/add-image.component';
 import { AdminServicesComponent } from '../admin-services/admin-services.component';
+import { AdminGalleryPageComponent } from '../admin-gallery-page/admin-gallery-page.component';
 
 const routes: Routes = [
   {path: '', component: AdminAreaComponent, children:[
@@ -25,7 +26,7 @@ const routes: Routes = [
     RouterModule.forChild(routes)
   ],
   declarations: [AdminAreaComponent, SidebarComponent, DashboardComponent,
-     AdminPackagesComponent, AdminpackageDetailComponent, AdminServicesComponent],
+     AdminPackagesComponent, AdminpackageDetailComponent, AdminServicesComponent, AdminGalleryPageComponent],
 
      exports:[RouterModule],
      entryComponents:[ ]
