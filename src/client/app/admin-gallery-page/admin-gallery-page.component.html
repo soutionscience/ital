@@ -1,3 +1,25 @@
-<p>
-  admin-gallery-page works!
-</p>
+<div class="gallery">
+  <div class="container">
+    <p class="title is-3">WELCOME TO GALLERY ADMIN</p>
+
+    <div class="images">
+      <div class="columns" >
+        <div class="column is-one-quarter" *ngFor ="let g of gallery">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                  <img [src]="'/uploads/' + g.filename">
+              </figure>
+            </div>
+            <footer class="card-footer">
+               <a href="#" class="card-footer-item is-danger">Delete</a>
+              </footer>
+          </div>
+          
+          
+      </div>
+    </div>
+
+    <div class="upload"><button class="button is-primary" (click)="addImage()">Add NEW</button></div>
+  </div>
+</div>

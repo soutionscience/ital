@@ -12,12 +12,14 @@ import { AdminpackageDetailComponent } from '../adminpackage-detail/adminpackage
 import { AddImageComponent } from '../add-image/add-image.component';
 import { AdminServicesComponent } from '../admin-services/admin-services.component';
 import { AdminGalleryPageComponent } from '../admin-gallery-page/admin-gallery-page.component';
+import { AddImageGalleryComponent } from '../add-image-gallery/add-image-gallery.component';
 
 const routes: Routes = [
   {path: '', component: AdminAreaComponent, children:[
     {path: '', component: DashboardComponent},
     {path: 'packages', component: AdminPackagesComponent},
-    {path: 'services', component: AdminServicesComponent}
+    {path: 'services', component: AdminServicesComponent},
+    {path: 'gallery', component: AdminGalleryPageComponent}
   ]}
 ]
 @NgModule({
@@ -29,6 +31,6 @@ const routes: Routes = [
      AdminPackagesComponent, AdminpackageDetailComponent, AdminServicesComponent, AdminGalleryPageComponent],
 
      exports:[RouterModule],
-     entryComponents:[ ]
+     entryComponents:[]
 })
 export class AdminModule { }

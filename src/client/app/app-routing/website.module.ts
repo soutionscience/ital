@@ -20,7 +20,8 @@ const routes: Routes = [
     {path: 'services', loadChildren: './service.module#ServiceModule'},
   {path: 'about-us', loadChildren: './about.module#AboutModule'},
   {path: 'contact-us', loadChildren: './contact.module#ContactModule'},
-{path: 'packages', loadChildren: './package.module#PackageModule'},
+   {path: 'packages', loadChildren: './package.module#PackageModule'},
+   {path: 'gallery', loadChildren: './gallery.module#GalleryModule'},
 {path: 'packagedetail/:id', component: PackageDetailComponent}] }
 ];
 

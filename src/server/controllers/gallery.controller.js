@@ -15,4 +15,12 @@ exports.get = (req, res, next)=>{
        if(err) throw err;
        res.status(200).json(resp)
    })
+
+}
+
+exports.deleteOne = (req, res, next)=>{
+    Gallery.findByIdAndRemove(req.params.id, function(err,resp){
+        if(err) throw err;
+        res.status(200).send("deleted")
+    })
 }

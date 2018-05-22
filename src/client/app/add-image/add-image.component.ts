@@ -10,6 +10,7 @@ import { ApiService } from '../services/api.service';
 })
 export class AddImageComponent implements OnInit {
 
+
   constructor(private uploadService: UploadService,
     private apiService: ApiService, 
     @Inject(MAT_DIALOG_DATA) public data:any,
@@ -17,6 +18,7 @@ export class AddImageComponent implements OnInit {
   @Output() myNotify = new EventEmitter<any>()
 
   ngOnInit() {
+    // console.log('is it working')
   }
   @ViewChild('fileInput') fileInput;
   addFile(): void {
@@ -27,7 +29,8 @@ export class AddImageComponent implements OnInit {
             .upload(fileToUpload)
             .subscribe(res => {
                // this.myNotify.emit(res)
-                console.log('is this the res' , res);
+              //  console.log('is this the res' , res);
+                let method = this.data.myMethod;
                 this.apiService.postTypes(this.data.myRoute, this.data.myId, res, 'images' )
             });
     }

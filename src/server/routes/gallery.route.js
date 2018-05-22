@@ -8,6 +8,9 @@ router.route('/')
 .post(controller.post)
 .get(controller.get)
 
+router.route('/:id')
+.delete(controller.deleteOne)
+
 
 
 

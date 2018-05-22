@@ -5,7 +5,7 @@ let Schema = mongoose.Schema;
 let Gallery = new Schema({
     title: String,
     shortdesc: String,
-    location: String,
+    filename: String,
     desc: String,
     
 });
