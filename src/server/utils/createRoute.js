@@ -6,6 +6,7 @@ module.exports = function(controller, router){
 
     router.route('/:id')
     .get(controller.getOne)
+    .delete(controller.deleteOne)
 
     router.route('/:id/days')
     .post(controller.postTypes)

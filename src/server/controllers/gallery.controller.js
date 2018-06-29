@@ -18,7 +18,7 @@ exports.get = (req, res, next)=>{
 
 }
 
-exports.deleteOne = (req, res, next)=>{
+exports.deleteOne = function (req, res, next){
     Gallery.findByIdAndRemove(req.params.id, function(err,resp){
         if(err) throw err;
         res.status(200).send("deleted")
