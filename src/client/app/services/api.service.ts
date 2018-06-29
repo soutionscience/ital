@@ -26,5 +26,8 @@ postTypes(apiRoute, id:number, message, item){
 deleteAll(apiRoute){
   this.restangular.all(apiRoute).remove();
 }
+deleteOne(id, apiRoute){
+  this.restangular.one(apiRoute, id).remove();
+}
 
 }

@@ -40,5 +40,8 @@ export class AdminPackagesComponent implements OnInit {
   deleteAll(){
     this.apiService.deleteAll('packages');
   }
+  myReload(){
+    this.getPackages();
+  }
 
 }
