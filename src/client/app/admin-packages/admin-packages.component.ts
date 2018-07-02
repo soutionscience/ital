@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Generic } from '../shared/generic.model';
 import { ApiService } from '../services/api.service';
-import { MatDialog, MatIcon} from '@angular/material';
+import { MatDialog, MatIcon } from '@angular/material';
 import { PackageDialogComponent } from '../package-dialog/package-dialog.component';
 
 
@@ -13,6 +13,7 @@ import { PackageDialogComponent } from '../package-dialog/package-dialog.compone
 export class AdminPackagesComponent implements OnInit {
   packages: Generic[];
   package: Generic;
+  dialogRef: any;
 
   constructor(private apiService: ApiService, private dialog: MatDialog) { }
 
@@ -20,8 +21,8 @@ export class AdminPackagesComponent implements OnInit {
     this.getPackages();
   }
 
-  getPackages(){
-   this.apiService.getResource('packages').subscribe(resp => this.packages = resp)
+  getPackages() {
+    this.apiService.getResource('packages').subscribe(resp => this.packages = resp);
   }
   // addNew(){
   //   console.log('adding new');
@@ -29,18 +30,26 @@ export class AdminPackagesComponent implements OnInit {
 
   // }
   addNew() {
-    this.dialog.open(PackageDialogComponent, {width: '500px' , height: 'auto',  data: {
-      dataKey: 'packages' // shows which route to use when posting.
-    } });
- 
+    this.dialog.open(PackageDialogComponent, {
+      width: '500px', height: 'auto', data: {
+        dataKey: 'packages' // shows which route to use when posting.
+      }
+    }).afterClosed().subscribe(() => this.getPackages());
+    // this.dialogRef = this.dialog.open(PackageDialogComponent);
+    // this.dialogRef.afterClosed().subscribe(() => {
+    //   console.log('closed by adding');
+    // });
   }
 
-  details(p) {this.package = p;};
 
-  deleteAll(){
+
+
+  details(p) { this.package = p; }
+
+  deleteAll() {
     this.apiService.deleteAll('packages');
   }
-  myReload(){
+  myReload() {
     this.getPackages();
   }
 

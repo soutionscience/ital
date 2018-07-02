@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ApiService } from '../services/api.service';
 import { MatDialogRef } from '@angular/material';
@@ -10,6 +10,7 @@ import { MatDialogRef } from '@angular/material';
 })
 export class PackageDialogComponent implements OnInit {
   myForm: FormGroup;
+  @Output() addEvent = new EventEmitter();
 
   constructor(private fb: FormBuilder, private apiService: ApiService, public dialogRef: MatDialogRef<PackageDialogComponent> ) {
     this.createForm();
@@ -27,7 +28,9 @@ export class PackageDialogComponent implements OnInit {
   onSubmit(){
     console.log('submiting ', this.myForm.value);
     this.apiService.postResource('packages', this.myForm.value);
+    this.addEvent.emit(null);
     this.close();
+
   }
   close(){
     this.dialogRef.close();
