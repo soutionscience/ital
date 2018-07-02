@@ -11,7 +11,7 @@ exports.post= function (req, res, next) {
 
 exports.get= function(req, res, next) {
     console.log('hitting get')
-    Package.find({})
+    Package.find({}).sort('-title')
     .exec(function(err, resp){
         if(err) throw err;
         res.status(200).json(resp)
