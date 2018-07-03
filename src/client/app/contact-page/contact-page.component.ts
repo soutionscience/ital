@@ -31,6 +31,7 @@ export class ContactPageComponent implements OnInit {
   contactUs(){
     console.log("submitted")
     this.apiService.postResource('messages', this.contactForm.value)
+    this.contactForm.reset();
   }
 
 }
