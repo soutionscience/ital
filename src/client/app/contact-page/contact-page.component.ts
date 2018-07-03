@@ -9,9 +9,16 @@ import { ApiService } from '../services/api.service';
 })
 export class ContactPageComponent implements OnInit {
   contactForm: FormGroup;
+  form: boolean;
+  sent: boolean;
+  spinner: boolean;
 
   constructor( private fb: FormBuilder, private apiService: ApiService) { 
-    this.createForm()}
+   this.createForm();
+   this.form = true;
+   this.sent = false;
+   this.spinner = false;
+  }
 
   ngOnInit() {
   }
@@ -28,10 +35,22 @@ export class ContactPageComponent implements OnInit {
     })
   }
 
-  contactUs(){
-    console.log("submitted")
-    this.apiService.postResource('messages', this.contactForm.value)
+  contactUs() {
+    this.spinner = true;
+    this.form = false;
+  this.apiService.postResource('messages', this.contactForm.value).subscribe(resp => {
+    if(resp){
+      this.sent = true;
+      this.spinner = false;
+    }
+     console.log('is this it? ', resp);
+    });
     this.contactForm.reset();
+  }
+  messageSent(){
+    this.contactForm.reset();
+    this.sent= false;
+    this.form = true;
   }
 
 }

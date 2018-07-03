@@ -6,7 +6,11 @@
       <div class="columns">
         <div class="column is-half">
           <div class="box">
-            <form action="" [formGroup]="contactForm" (submit)="contactUs()"> 
+            <div *ngIf="spinner" class="loader"></div>
+            <div  *ngIf ="sent"><p class="title is-success">Message Sent</p>
+            <div class="button is-success" (click)="messageSent()">Ok</div>
+            </div>
+            <form  [hidden]= "!form" action="" [formGroup]="contactForm" (submit)="contactUs()"> 
               <!-- Here: {{contactForm.value|json}} -->
               <div class="field">
                 <label class="label">Name</label>
