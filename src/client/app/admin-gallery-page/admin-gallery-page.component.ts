@@ -25,5 +25,14 @@ export class AdminGalleryPageComponent implements OnInit {
   addImage(id, route, method) {
     this.dialog.open(AddImageGalleryComponent, {width: '400px', height: 'auto', data: { myMethod: method, myId: id, myRoute: route }} );
   }
+  deleteOne(id, route) {
+    console.log('deleted ', route, ' with id: ', id);
+    this.apiService.deleteOne(id, route);
+    this.myReload();
+  
+   }
+   myReload() {
+    this.getImages();
+  }
 
 }

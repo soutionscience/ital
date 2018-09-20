@@ -3,10 +3,10 @@
     <p class="title is-4">Some of our adventures</p>
     <div *ngIf="!Gallery" class="loader"></div>
  <div class="myimage">
-   <div class="columns">
+   <div class="columns is-multiline">
      <div class="column is-one-quarter" *ngFor ="let g of Gallery">
        <div class="imageCard">
-          <img [src]="'/uploads/' + g.filename">
+          <img [src]="'https://ital.herokuapp.com/uploads/' + g.filename">
           
        </div>
      </div>

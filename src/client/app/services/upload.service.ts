@@ -12,7 +12,8 @@ export class UploadService {
     input.append('file', fileToUpload);
 
     return this.http
-        .post('/api/uploads', input);
+       // .post('/uploads', input);
+      .post('https://ital.herokuapp.com/api/uploads', input)
 }
 
 
