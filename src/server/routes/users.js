@@ -6,8 +6,12 @@ let controller = require('../controllers/users.controller')
 router.route('/')
 .get(controller.get)
 
-router.route('register')
-.post(controller.post)
+
+router.route('/register')
+.post(controller.register)
+
+router.route('/login')
+.post(controller.login)
 
 
 

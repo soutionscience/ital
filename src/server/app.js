@@ -5,6 +5,8 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 let mongoose = require('mongoose')
+var passport = require('passport');
+var LocalStrategy = require('passport-local').Strategy;
 
 require('dotenv').config();
 
@@ -21,6 +23,9 @@ let cors = require('cors');
 
 var app = express();
 app.use(cors());
+
+//config passport
+app.use(passport.initialize());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

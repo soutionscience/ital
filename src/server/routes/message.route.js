@@ -36,7 +36,7 @@ router.post('/', function(req, res, next){
         // setup email data with unicode symbols
         let mailOptions = {
             from: 'Ital Safari Website', // sender address
-            to: 'rubinnjagi@yahoo.com, rubinnjagi2@gmail.com', // list of receivers
+            to: 'rubinnjagi@yahoo.com; rubinnjagi2@gmail.com', // list of receivers
             subject: 'NEW Client ✔', // Subject line
             text: 'Hello world?', // plain text body
             html: output// html body
