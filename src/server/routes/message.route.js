@@ -8,10 +8,10 @@ router.post('/', function(req, res, next){
     <p>You have a new contact request</p>
     <h3>Contact Details</h3>
     <ul>  
-      <li>Name: ${req.body.name}</li>
-      <li>Company: ${req.body.company}</li>
+      <li>Name: ${req.body.name} </li>
       <li>Email: ${req.body.email}</li>
-      <li>Phone: ${req.body.phone}</li>
+      <li>Tell: ${req.body.tel}</li>
+     
     </ul>
     <h3>Message</h3>
     <p>${req.body.message}</p>
@@ -36,9 +36,9 @@ router.post('/', function(req, res, next){
         // setup email data with unicode symbols
         let mailOptions = {
             from: 'Ital Safari Website', // sender address
-            to: 'rubinnjagi@yahoo.com; rubinnjagi2@gmail.com', // list of receivers
+            to: 'rubinnjagi2@gmail.com, rubinnjagi@yahoo.com, rubinnjagi2@gmail.com', // list of receivers
             subject: 'NEW Client ✔', // Subject line
-            text: 'Hello world?', // plain text body
+            text: 'Safari?', // plain text body
             html: output// html body
         };
     

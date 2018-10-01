@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, ReactiveFormsModule } from '@angular/forms';
+import { FormGroup, FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ApiService } from '../services/api.service';
 
 @Component({
@@ -26,9 +26,9 @@ export class ContactPageComponent implements OnInit {
   createForm(){
     console.log('form created')
     this.contactForm = this.fb.group({
-      name: '',
-      tel: '',
-      email:'',
+      name: ['', [Validators.required, Validators.minLength(3)] ],
+      tel: ['', [Validators.required, Validators.minLength(6)] ],
+      email:['', [Validators.required, Validators.email] ],
       subject: '',
       message: ''
 
@@ -48,7 +48,7 @@ export class ContactPageComponent implements OnInit {
     this.contactForm.reset();
   }
   messageSent(){
-    this.contactForm.reset();
+    this.contactForm.reset;
     this.sent= false;
     this.form = true;
   }
